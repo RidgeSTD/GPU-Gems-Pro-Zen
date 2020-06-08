@@ -7,6 +7,7 @@ public class SceneManager : MonoBehaviour
     public Camera lightCam;
     public Light mainLight;
 
+
     void Start()
     {
         if (mainLight.type == LightType.Directional)
@@ -17,10 +18,6 @@ public class SceneManager : MonoBehaviour
         {
             lightCam.orthographic = false;
         }
-    }
-
-    void Update()
-    {
-
+        lightCam.depthTextureMode = DepthTextureMode.Depth;
     }
 }
